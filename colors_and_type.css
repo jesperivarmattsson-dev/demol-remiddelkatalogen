@@ -1,0 +1,292 @@
+/* Sikt Design System — Base tokens + semantic styles
+   Source: sds-experimental / packages/tokens + Figma SDS Komponentbibliotek 2.0.0 */
+
+/* Haffer — Displaay. Licensed; files supplied by Sikt. */
+@font-face {
+  font-family: "Haffer";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Haffer-Regular.woff2") format("woff2"),
+       url("./fonts/Haffer-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Haffer";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("./fonts/Haffer-RegularItalic.woff2") format("woff2"),
+       url("./fonts/Haffer-RegularItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Haffer";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Haffer-SemiBold.woff2") format("woff2"),
+       url("./fonts/Haffer-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Haffer";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("./fonts/Haffer-Bold.woff2") format("woff2"),
+       url("./fonts/Haffer-Bold.woff") format("woff");
+}
+
+:root {
+  /* ─── Base colors ──────────────────────────────────────────────── */
+  /* Purple — primary brand */
+  --sds-purple-98: #F6F4FF;
+  --sds-purple-95: #EBE6FE;
+  --sds-purple-90: #D1CDFF;
+  --sds-purple-87: #C2BCFF;
+  --sds-purple-84: #B4AEFF;
+  --sds-purple-76: #9284FF;
+  --sds-purple-65: #7351FB;   /* brand action */
+  --sds-purple-61: #643FFA;
+  --sds-purple-55: #5531E8;
+  --sds-purple-46: #4324C8;
+  --sds-purple-39: #351AAD;
+  --sds-purple-31: #260D92;
+  --sds-purple-20: #150266;
+  --sds-purple-10: #0A0132;   /* brand dark / default fg */
+
+  /* Neutral */
+  --sds-neutral-100: #FFFFFF;
+  --sds-neutral-97:  #F7F7F7;
+  --sds-neutral-95:  #F1F1F1;
+  --sds-neutral-92:  #EBEBEB;
+  --sds-neutral-90:  #E5E5E5;
+  --sds-neutral-87:  #DEDEDE;
+  --sds-neutral-84:  #D6D6D6;
+  --sds-neutral-80:  #CCCCCC;
+  --sds-neutral-58:  #959595;
+  --sds-neutral-46:  #767676;
+  --sds-neutral-40:  #656565;
+  --sds-neutral-35:  #595959;
+  --sds-neutral-31:  #4F4F4F;
+  --sds-neutral-25:  #404040;
+  --sds-neutral-20:  #333333;
+  --sds-neutral-15:  #262626;
+  --sds-neutral-10:  #1A1A1A;
+  --sds-neutral-0:   #000000;
+
+  /* Semantic — status */
+  --sds-green-89:  #CFF7E2;
+  --sds-green-30:  #138849;
+  --sds-green-23:  #007638;
+  --sds-green-22:  #096638;
+  --sds-green-18:  #07542E;
+  --sds-green-15:  #054625;
+  --sds-green-9:   #032B17;
+
+  --sds-yellow-91: #FCEED2;
+  --sds-yellow-50: #FFB700;
+  --sds-yellow-48: #F6A000;
+  --sds-yellow-46: #ED9200;
+
+  --sds-red-96: #FFEAE9;
+  --sds-red-68: #E87373;
+  --sds-red-52: #D74033;
+  --sds-red-40: #CC1201;
+  --sds-red-36: #B60203;
+  --sds-red-30: #970002;
+  --sds-red-25: #7F0001;
+  --sds-red-14: #470001;
+
+  --sds-blue-95: #E6F0FF;
+  --sds-blue-54: #136DFF;
+  --sds-blue-46: #005AEA;
+  --sds-blue-41: #004FCF;
+  --sds-blue-33: #0041A9;
+  --sds-blue-27: #00368C;
+  --sds-blue-15: #001D4D;
+
+  /* Data-viz categorical palette */
+  --sds-dv-1: #FF957A;
+  --sds-dv-2: #FFAC70;
+  --sds-dv-3: #FBC774;
+  --sds-dv-4: #FBE774;
+  --sds-dv-5: #82E3CB;
+  --sds-dv-6: #75C7F0;
+  --sds-dv-7: #CCA3F5;
+  --sds-dv-8: #F5A3CC;
+
+  /* ─── Semantic color roles ─────────────────────────────────────── */
+  --sds-color-background-default:    var(--sds-neutral-100);
+  --sds-color-background-subtle:     var(--sds-neutral-97);
+  --sds-color-background-muted:      var(--sds-neutral-95);
+  --sds-color-background-inverse:    var(--sds-purple-10);
+  --sds-color-background-accent:     var(--sds-purple-95);
+
+  --sds-color-text-default:          var(--sds-purple-10);
+  --sds-color-text-subtle:           var(--sds-neutral-35);
+  --sds-color-text-muted:            var(--sds-neutral-46);
+  --sds-color-text-inverse:          var(--sds-neutral-100);
+  --sds-color-text-action:           var(--sds-purple-65);
+  --sds-color-text-action-hover:     var(--sds-purple-55);
+
+  --sds-color-border-default:        var(--sds-neutral-87);
+  --sds-color-border-subtle:         var(--sds-neutral-92);
+  --sds-color-border-strong:         var(--sds-purple-10);
+  --sds-color-border-action:         var(--sds-purple-65);
+  --sds-color-border-focus:          var(--sds-purple-65);
+
+  --sds-color-action-default:        var(--sds-purple-65);
+  --sds-color-action-hover:          var(--sds-purple-55);
+  --sds-color-action-active:         var(--sds-purple-46);
+
+  --sds-color-info-background:       var(--sds-blue-95);
+  --sds-color-info-border:           var(--sds-blue-46);
+  --sds-color-info-text:             var(--sds-blue-15);
+
+  --sds-color-success-background:    var(--sds-green-89);
+  --sds-color-success-border:        var(--sds-green-23);
+  --sds-color-success-text:          var(--sds-green-9);
+
+  --sds-color-warning-background:    var(--sds-yellow-91);
+  --sds-color-warning-border:        var(--sds-yellow-48);
+  --sds-color-warning-text:          var(--sds-neutral-10);
+
+  --sds-color-danger-background:     var(--sds-red-96);
+  --sds-color-danger-border:         var(--sds-red-40);
+  --sds-color-danger-text:           var(--sds-red-14);
+
+  --sds-color-shadow-elevated-default: rgba(10, 1, 50, 0.10);
+  --sds-color-shadow-elevated-hover:   rgba(10, 1, 50, 0.16);
+
+  /* ─── Size / space scale ─────────────────────────────────────── */
+  --sds-size-xxxs: 2px;
+  --sds-size-xxs:  4px;
+  --sds-size-xs:   8px;
+  --sds-size-s:    12px;
+  --sds-size-s1:   16px;
+  --sds-size-m:    24px;
+  --sds-size-m1:   32px;
+  --sds-size-l:    48px;
+  --sds-size-xl:   96px;
+  --sds-size-xxl:  192px;
+
+  --sds-padding-infinitesimal: var(--sds-size-xxxs);
+  --sds-padding-minimal:       var(--sds-size-xxs);
+  --sds-padding-tiny:          var(--sds-size-xs);
+  --sds-padding-small:         var(--sds-size-s);
+  --sds-padding-medium:        var(--sds-size-s);
+  --sds-padding-large:         var(--sds-size-m);
+  --sds-padding-huge:          var(--sds-size-m1);
+
+  --sds-radius-minimal: var(--sds-size-xxs);  /* 4 */
+  --sds-radius-small:   var(--sds-size-xs);   /* 8 */
+  --sds-radius-medium:  var(--sds-size-s);    /* 12 */
+  --sds-radius-large:   var(--sds-size-m);    /* 24 */
+  --sds-radius-full:    99999px;
+
+  --sds-border-thin:    1px;
+  --sds-border-regular: 2px;
+  --sds-border-bold:    4px;
+
+  --sds-shadow-elevated-default: 0 4px 24px var(--sds-color-shadow-elevated-default);
+  --sds-shadow-elevated-hover:   0 4px 12px var(--sds-color-shadow-elevated-hover);
+
+  /* Breakpoints */
+  --sds-bp-mobile:    0px;
+  --sds-bp-tablet:    720px;
+  --sds-bp-desktop:   1024px;
+  --sds-bp-ultrawide: 1440px;
+
+  /* Z-index */
+  --sds-z-default: auto;
+  --sds-z-menu:    1000;
+  --sds-z-drawer:  2000;
+  --sds-z-modal:   3000;
+
+  /* ─── Typography base ─────────────────────────────────────────── */
+  --sds-font-family: "Haffer", Arial, system-ui, sans-serif;
+  --sds-font-mono:   "Menlo", "Consolas", monospace;
+
+  --sds-fw-regular:  400;
+  --sds-fw-semibold: 600;
+  --sds-fw-bold:     700;
+
+  --sds-fs-100:  12px;
+  --sds-fs-200:  14px;
+  --sds-fs-300:  16px;
+  --sds-fs-400:  18px;
+  --sds-fs-500:  20px;
+  --sds-fs-600:  22px;
+  --sds-fs-700:  24px;
+  --sds-fs-800:  28px;
+  --sds-fs-900:  32px;
+  --sds-fs-1000: 36px;
+  --sds-fs-1100: 42px;
+  --sds-fs-1200: 48px;
+  --sds-fs-1300: 56px;
+  --sds-fs-1400: 64px;
+  --sds-fs-1500: 72px;
+
+  --sds-lh-xs: 1.15;
+  --sds-lh-s:  1.25;
+  --sds-lh-m:  1.35;
+  --sds-lh-l:  1.5;
+  --sds-lh-xl: 1.6;
+}
+
+/* ─── Global defaults ─────────────────────────────────────────── */
+html, body {
+  font-family: var(--sds-font-family);
+  font-weight: var(--sds-fw-regular);
+  color: var(--sds-color-text-default);
+  background: var(--sds-color-background-default);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ─── Editorial headline (long-form / marketing) ─────────────── */
+.sds-headline-xxl { font-family: var(--sds-font-family); font-weight: 600; font-size: 48px; line-height: 1.15; letter-spacing: -0.01em; }
+.sds-headline-xl  { font-family: var(--sds-font-family); font-weight: 600; font-size: 42px; line-height: 1.15; letter-spacing: -0.01em; }
+.sds-headline-l   { font-family: var(--sds-font-family); font-weight: 600; font-size: 32px; line-height: 1.15; }
+.sds-headline-m   { font-family: var(--sds-font-family); font-weight: 600; font-size: 28px; line-height: 1.25; }
+.sds-headline-s   { font-family: var(--sds-font-family); font-weight: 600; font-size: 24px; line-height: 1.25; }
+.sds-headline-xs  { font-family: var(--sds-font-family); font-weight: 600; font-size: 22px; line-height: 1.35; }
+.sds-headline-xxs { font-family: var(--sds-font-family); font-weight: 600; font-size: 16px; line-height: 1.5; }
+
+/* ─── Application headline (product UI) ─────────────────────── */
+.sds-app-h-xxl { font-family: var(--sds-font-family); font-weight: 600; font-size: 36px; line-height: 1.25; }
+.sds-app-h-xl  { font-family: var(--sds-font-family); font-weight: 600; font-size: 28px; line-height: 1.25; }
+.sds-app-h-l   { font-family: var(--sds-font-family); font-weight: 600; font-size: 24px; line-height: 1.25; }
+.sds-app-h-m   { font-family: var(--sds-font-family); font-weight: 600; font-size: 22px; line-height: 1.25; }
+.sds-app-h-s   { font-family: var(--sds-font-family); font-weight: 600; font-size: 20px; line-height: 1.35; }
+.sds-app-h-xs  { font-family: var(--sds-font-family); font-weight: 600; font-size: 18px; line-height: 1.35; }
+.sds-app-h-xxs { font-family: var(--sds-font-family); font-weight: 600; font-size: 16px; line-height: 1.35; }
+
+/* ─── Body copy ─────────────────────────────────────────────── */
+.sds-body-xl      { font-weight: 400; font-size: 20px; line-height: 1.5; }
+.sds-body-l       { font-weight: 400; font-size: 18px; line-height: 1.35; }
+.sds-body-default { font-weight: 400; font-size: 16px; line-height: 1.5; }
+.sds-body-s       { font-weight: 400; font-size: 14px; line-height: 1.6; }
+
+/* ─── Label ─────────────────────────────────────────────────── */
+.sds-label    { font-weight: 600; font-size: 16px; line-height: 1.5; }
+.sds-label-l  { font-weight: 600; font-size: 18px; line-height: 1.35; }
+
+/* ─── Overline (sparing uppercase) ─────────────────────────── */
+.sds-overline { font-weight: 600; font-size: 12px; line-height: 1.35; letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* ─── Code ──────────────────────────────────────────────────── */
+.sds-code { font-family: var(--sds-font-mono); font-size: 14px; background: var(--sds-neutral-95); padding: 2px 6px; border-radius: 4px; }
+
+/* ─── Heading element defaults (site-level) ────────────────── */
+h1 { font-family: var(--sds-font-family); font-weight: 600; font-size: 48px; line-height: 1.15; margin: 0 0 .4em; color: var(--sds-color-text-default); }
+h2 { font-family: var(--sds-font-family); font-weight: 600; font-size: 32px; line-height: 1.15; margin: 1.6em 0 .4em; }
+h3 { font-family: var(--sds-font-family); font-weight: 600; font-size: 24px; line-height: 1.25; margin: 1.4em 0 .4em; }
+h4 { font-family: var(--sds-font-family); font-weight: 600; font-size: 20px; line-height: 1.35; margin: 1.2em 0 .4em; }
+h5 { font-family: var(--sds-font-family); font-weight: 600; font-size: 18px; line-height: 1.35; margin: 1em 0 .4em; }
+h6 { font-family: var(--sds-font-family); font-weight: 600; font-size: 16px; line-height: 1.5; margin: 1em 0 .4em; }
+p  { font-weight: 400; font-size: 16px; line-height: 1.5; margin: 0 0 1em; }
+p  { text-wrap: pretty; }
+a  { color: var(--sds-color-text-action); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--sds-color-text-action-hover); }
+
+::selection { background: var(--sds-purple-90); color: var(--sds-purple-10); }
